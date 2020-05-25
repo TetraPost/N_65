@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  div.container
+  nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+    h4.white|Unit N_65
+    ul.navbar-nav.ml-auto
+  .main.container
+    .row
+      .col-md-12.col-md-offset-3
+        hr
+        form(name='loginForm' enctype='multipart/form-data')
+          input.form-control(type='text', name='username' placeholder='Type Login')
+          input.form-control(type='password', name='password' placeholder='Type Password')
+          br
+          button.btn-info.btn-block(type='submit') |> Sign in with local strategies (Не работает)
+        hr
+        <a href="/auth/github">Log In with OAuth Provider (Работает)</a>
